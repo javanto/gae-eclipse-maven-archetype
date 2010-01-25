@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.beardedgeeks</groupId>
+	<artifactId>gae-eclipse-maven-archetype</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>maven-archetype</packaging>
+	<name>GAE + Eclipse + Maven Archetype</name>
+	<description>Arhectype for Maven managed Google App Engine project which is integrated with Google Plugin for Eclipse.</description>
+	<url>http://code.google.com/p/beardedgeeks</url>
+	<inceptionYear>2010</inceptionYear>
+	<organization>
+		<name>Bearded Geeks</name>
+		<url>http://beardedgeeks.org</url>
+	</organization>
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<id>hleinone</id>
+			<name>Hannu Leinonen</name>
+			<email>hleinone@gmail.com</email>
+			<url>http://hamandeggs.wordpress.com</url>
+			<organization>Bearded Geeks</organization>
+			<organizationUrl>http://beardedgeeks.org</organizationUrl>
+			<roles>
+				<role>owner</role>
+			</roles>
+			<timezone>+2</timezone>
+		</developer>
+	</developers>
+
+	<issueManagement>
+		<system>Google Code</system>
+		<url>http://code.google.com/p/beardedgeeks/issues/list</url>
+	</issueManagement>
+	<scm>
+		<connection>scm:svn:http://beardedgeeks.googlecode.com/svn/gae-eclipse-maven-archetype</connection>
+		<developerConnection>scm:svn:https://beardedgeeks.googlecode.com/svn/gae-eclipse-maven-archetype</developerConnection>
+		<url>http://code.google.com/p/beardedgeeks/source/browse/#svn/gae-eclipse-maven-archetype</url>
+	</scm>
+
+	<build>
+		<extensions>
+			<extension>
+				<groupId>org.jvnet.wagon-svn</groupId>
+				<artifactId>wagon-svn</artifactId>
+				<version>1.9</version>
+			</extension>
+			<extension>
+				<groupId>org.apache.maven.archetype</groupId>
+				<artifactId>archetype-packaging</artifactId>
+				<version>2.0-alpha-4</version>
+			</extension>
+		</extensions>
+		<plugins>
+			<plugin>
+				<artifactId>maven-archetype-plugin</artifactId>
+				<version>2.0-alpha-4</version>
+				<extensions>true</extensions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.0-beta-8</version>
+			</plugin>
+		</plugins>
+	</build>
+
+	<distributionManagement>
+		<repository>
+			<id>beardedgeeks-googlecode</id>
+			<url>svn:https://beardedgeeks.googlecode.com/svn/repository/releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>beardedgeeks-googlecode</id>
+			<uniqueVersion>false</uniqueVersion>
+			<url>svn:https://beardedgeeks.googlecode.com/svn/repository/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+</project>
