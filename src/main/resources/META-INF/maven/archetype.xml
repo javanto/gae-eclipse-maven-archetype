@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><archetype>
+  <id>gae-eclipse-maven-example</id>
+  <sources>
+    <source>src\main\java\guestbook\Greeting.java</source>
+    <source>src\main\java\guestbook\PMF.java</source>
+    <source>src\main\java\guestbook\SignGuestbookServlet.java</source>
+  </sources>
+  <resources>
+    <resource>src\main\resources\META-INF\jdoconfig.xml</resource>
+    <resource>src\main\webapp\guestbook.jsp</resource>
+    <resource>src\main\webapp\stylesheets\main.css</resource>
+    <resource>src\main\webapp\WEB-INF\appengine-web.xml</resource>
+    <resource>src\main\webapp\WEB-INF\logging.properties</resource>
+    <resource>src\main\webapp\WEB-INF\web.xml</resource>
+  </resources>
+</archetype>
