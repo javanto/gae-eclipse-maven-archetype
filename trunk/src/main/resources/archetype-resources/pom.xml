@@ -9,27 +9,6 @@
 
 	<name>Gae + Eclipse + Maven Example - Guestbook</name>
 	<description>The Guestbook Example changed to a one managed by Maven which also works on the Google Eclipse Plugin</description>
-	<url>http://gae-eclipse-maven-example.appspot.com</url>
-	<inceptionYear>2010</inceptionYear>
-	<organization>
-		<name>Bearded Geeks</name>
-		<url>http://beardedgeeks.org</url>
-	</organization>
-
-	<developers>
-		<developer>
-			<id>hleinone</id>
-			<name>Hannu Leinonen</name>
-			<email>hleinone@gmail.com</email>
-			<url>http://hamandeggs.wordpress.com</url>
-			<organization>Bearded Geeks</organization>
-			<organizationUrl>http://beardedgeeks.org</organizationUrl>
-			<roles>
-				<role>owner</role>
-			</roles>
-			<timezone>+2</timezone>
-		</developer>
-	</developers>
 
 	<build>
 		<plugins>
@@ -94,26 +73,28 @@
 					<additionalConfig>
 						<file>
 							<name>.externalToolBuilders/MavenBuilder.launch</name>
-							<content>&lt;launchConfiguration type="org.maven.ide.eclipse.Maven2BuilderConfigurationType"&gt;
-&lt;booleanAttribute key="M2_DEBUG_OUTPUT" value="true"/&gt;
-&lt;stringAttribute key="M2_GOALS_AFTER_CLEAN" value="war:exploded"/&gt;
-&lt;stringAttribute key="M2_GOALS_AUTO_BUILD" value="war:exploded"/&gt;
-&lt;stringAttribute key="M2_GOALS_CLEAN" value="clean"/&gt;
-&lt;stringAttribute key="M2_GOALS_MANUAL_BUILD" value="war:exploded"/&gt;
-&lt;booleanAttribute key="M2_NON_RECURSIVE" value="false"/&gt;
-&lt;booleanAttribute key="M2_OFFLINE" value="false"/&gt;
-&lt;stringAttribute key="M2_PROFILES" value=""/&gt;
-&lt;listAttribute key="M2_PROPERTIES"/&gt;
-&lt;stringAttribute key="M2_RUNTIME" value="EMBEDDED"/&gt;
-&lt;booleanAttribute key="M2_SKIP_TESTS" value="false"/&gt;
-&lt;booleanAttribute key="M2_UPDATE_SNAPSHOTS" value="false"/&gt;
-&lt;booleanAttribute key="M2_WORKSPACE_RESOLUTION" value="false"/&gt;
-&lt;booleanAttribute key="editedByExternalToolsMainTab" value="true"/&gt;
-&lt;booleanAttribute key="org.eclipse.debug.ui.ATTR_LAUNCH_IN_BACKGROUND" value="false"/&gt;
-&lt;stringAttribute key="org.eclipse.jdt.launching.WORKING_DIRECTORY" value="${basedir}"/&gt;
-&lt;stringAttribute key="org.eclipse.ui.externaltools.ATTR_RUN_BUILD_KINDS" value="full,incremental,auto,clean"/&gt;
-&lt;booleanAttribute key="org.eclipse.ui.externaltools.ATTR_TRIGGERS_CONFIGURED" value="true"/&gt;
-&lt;/launchConfiguration&gt;</content>
+							<content>
+<![CDATA[<launchConfiguration type="org.maven.ide.eclipse.Maven2BuilderConfigurationType">
+<booleanAttribute key="M2_DEBUG_OUTPUT" value="true"/>
+<stringAttribute key="M2_GOALS_AFTER_CLEAN" value="war:exploded"/>
+<stringAttribute key="M2_GOALS_AUTO_BUILD" value="war:exploded"/>
+<stringAttribute key="M2_GOALS_CLEAN" value="clean"/>
+<stringAttribute key="M2_GOALS_MANUAL_BUILD" value="war:exploded"/>
+<booleanAttribute key="M2_NON_RECURSIVE" value="false"/>
+<booleanAttribute key="M2_OFFLINE" value="false"/>
+<stringAttribute key="M2_PROFILES" value=""/>
+<listAttribute key="M2_PROPERTIES"/>
+<stringAttribute key="M2_RUNTIME" value="EMBEDDED"/>
+<booleanAttribute key="M2_SKIP_TESTS" value="false"/>
+<booleanAttribute key="M2_UPDATE_SNAPSHOTS" value="false"/>
+<booleanAttribute key="M2_WORKSPACE_RESOLUTION" value="false"/>
+<booleanAttribute key="editedByExternalToolsMainTab" value="true"/>
+<booleanAttribute key="org.eclipse.debug.ui.ATTR_LAUNCH_IN_BACKGROUND" value="false"/>
+<stringAttribute key="org.eclipse.jdt.launching.WORKING_DIRECTORY" value="${basedir}"/>
+<stringAttribute key="org.eclipse.ui.externaltools.ATTR_RUN_BUILD_KINDS" value="full,incremental,auto,clean"/>
+<booleanAttribute key="org.eclipse.ui.externaltools.ATTR_TRIGGERS_CONFIGURED" value="true"/>
+</launchConfiguration>]]>
+							</content>
 						</file>
 					</additionalConfig>
 				</configuration>
@@ -186,6 +167,7 @@
 			<id>maven2-repository.dev.java.net</id>
 			<url>http://download.java.net/maven/2</url>
 			<releases>
+				<enabled>true</enabled>
 			</releases>
 			<snapshots>
 				<enabled>false</enabled>
@@ -195,6 +177,7 @@
 			<id>mvnsearch</id>
 			<url>http://www.mvnsearch.org/maven2</url>
 			<releases>
+				<enabled>true</enabled>
 			</releases>
 			<snapshots>
 				<enabled>false</enabled>
@@ -204,6 +187,7 @@
 			<id>maven-gae-plugin-repo</id>
 			<url>http://maven-gae-plugin.googlecode.com/svn/repository</url>
 			<releases>
+				<enabled>true</enabled>
 			</releases>
 			<snapshots>
 				<enabled>false</enabled>
@@ -215,6 +199,7 @@
 			<id>maven-gae-plugin-repo</id>
 			<url>http://maven-gae-plugin.googlecode.com/svn/repository</url>
 			<releases>
+				<enabled>true</enabled>
 			</releases>
 			<snapshots>
 				<enabled>false</enabled>
@@ -227,6 +212,7 @@
 				<enabled>false</enabled>
 			</releases>
 			<snapshots>
+				<enabled>true</enabled>
 			</snapshots>
 		</pluginRepository>
 	</pluginRepositories>
@@ -235,13 +221,6 @@
 		<dependency>
 			<groupId>com.google.appengine</groupId>
 			<artifactId>appengine-api-1.0-sdk</artifactId>
-			<version>${gae.version}</version>
-			<type>jar</type>
-			<scope>compile</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.google.appengine</groupId>
-			<artifactId>appengine-api-labs</artifactId>
 			<version>${gae.version}</version>
 			<type>jar</type>
 			<scope>compile</scope>
@@ -292,7 +271,7 @@
 			<artifactId>geronimo-servlet_2.5_spec</artifactId>
 			<version>1.2</version>
 			<type>jar</type>
-			<scope>compile</scope>
+			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.geronimo.specs</groupId>
@@ -321,13 +300,13 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-		<dependency>
-			<groupId>apache-taglibs</groupId>
-			<artifactId>jstl</artifactId>
-			<version>1.1.2</version>
-			<type>jar</type>
-			<scope>runtime</scope>
-		</dependency>
+        <dependency>
+            <artifactId>standard</artifactId>
+            <groupId>taglibs</groupId>
+            <version>1.1.2</version>
+            <type>jar</type>
+            <scope>runtime</scope>
+        </dependency>
 	</dependencies>
 
 	<properties>

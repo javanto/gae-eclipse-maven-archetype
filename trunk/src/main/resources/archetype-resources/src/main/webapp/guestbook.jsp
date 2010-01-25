@@ -48,7 +48,7 @@
 	request.setAttribute("greetings", greetings);
 %>
 <c:if test="${symbol_dollar}{empty greetings}">
-	<p>The ${packageInPathFormat} has no messages.</p>
+	<p>The guestbook has no messages.</p>
 </c:if>
 <c:if test="${symbol_dollar}{not empty greetings}">
 	<c:forEach items="${symbol_dollar}{greetings}" var="g">
