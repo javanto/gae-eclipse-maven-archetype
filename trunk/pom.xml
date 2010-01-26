@@ -7,7 +7,7 @@
 	<groupId>org.beardedgeeks</groupId>
 	<artifactId>gae-eclipse-maven-archetype</artifactId>
 	<version>1.0-SNAPSHOT</version>
-	<packaging>maven-archetype</packaging>
+	<packaging>jar</packaging>
 	
 	<name>GAE + Eclipse + Maven Archetype</name>
 	<description>Arhectype for Maven managed Google App Engine project which is integrated with Google Plugin for Eclipse.</description>
@@ -46,7 +46,7 @@
 	<scm>
 		<connection>scm:svn:http://beardedgeeks.googlecode.com/svn/gae-eclipse-maven-archetype</connection>
 		<developerConnection>scm:svn:https://beardedgeeks.googlecode.com/svn/gae-eclipse-maven-archetype</developerConnection>
-		<url>http://code.google.com/p/beardedgeeks/source/browse/#svn/maven-merge-properties-plugin</url>
+		<url>http://beardedgeeks.googlecode.com/svn/repository/snapshots/org/beardedgeeks/gae-eclipse-maven-archetype</url>
 	</scm>
 
 	<build>
