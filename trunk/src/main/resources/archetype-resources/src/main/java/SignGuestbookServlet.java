@@ -1,7 +1,7 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-package ${packageInPathFormat};
+package ${package};
 
 import java.io.IOException;
 import java.util.Date;
@@ -34,6 +34,6 @@ public class SignGuestbookServlet extends HttpServlet {
 			pm.close();
 		}
 
-		resp.sendRedirect("/${packageInPathFormat}.jsp");
+		resp.sendRedirect("/guestbook.jsp");
 	}
 }
