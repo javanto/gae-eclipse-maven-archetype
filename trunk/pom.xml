@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+	
 	<groupId>org.beardedgeeks</groupId>
 	<artifactId>gae-eclipse-maven-archetype</artifactId>
 	<version>1.0</version>
-	<packaging>maven-archetype</packaging>
+	<packaging>jar</packaging>
+	
 	<name>GAE + Eclipse + Maven Archetype</name>
 	<description>Arhectype for Maven managed Google App Engine project which is integrated with Google Plugin for Eclipse.</description>
+	<url>http://code.google.com/p/beardedgeeks</url>
 	<inceptionYear>2010</inceptionYear>
+	<organization>
+		<name>Bearded Geeks</name>
+		<url>http://beardedgeeks.org</url>
+	</organization>
 	<licenses>
 		<license>
 			<name>The Apache Software License, Version 2.0</name>
@@ -22,6 +29,7 @@
 			<email>hleinone@gmail.com</email>
 			<url>http://hamandeggs.wordpress.com</url>
 			<organization>Bearded Geeks</organization>
+			<organizationUrl>http://beardedgeeks.org</organizationUrl>
 			<roles>
 				<role>owner</role>
 			</roles>
@@ -36,6 +44,7 @@
 	<scm>
 		<connection>scm:svn:http://beardedgeeks.googlecode.com/svn/gae-eclipse-maven-archetype/tags/gae-eclipse-maven-archetype-1.0</connection>
 		<developerConnection>scm:svn:https://beardedgeeks.googlecode.com/svn/gae-eclipse-maven-archetype/tags/gae-eclipse-maven-archetype-1.0</developerConnection>
+		<url>http://beardedgeeks.googlecode.com/svn/repository/snapshots/org/beardedgeeks/gae-eclipse-maven-archetype/tags/gae-eclipse-maven-archetype-1.0</url>
 	</scm>
 
 	<build>
@@ -80,7 +89,7 @@
 
 	<repositories>
 		<repository>
-			<id>beardedgeeks-releases</id>
+			<id>beardedgeeks-snapshots</id>
 			<url>http://beardedgeeks.googlecode.com/svn/repository/snapshots</url>
 			<releases>
 				<enabled>false</enabled>
@@ -113,11 +122,11 @@
 
 	<distributionManagement>
 		<repository>
-			<id>beardedgeeks-googlecode</id>
+			<id>beardedgeeks-releases</id>
 			<url>svn:https://beardedgeeks.googlecode.com/svn/repository/releases</url>
 		</repository>
 		<snapshotRepository>
-			<id>beardedgeeks-googlecode</id>
+			<id>beardedgeeks-snapshots</id>
 			<uniqueVersion>false</uniqueVersion>
 			<url>svn:https://beardedgeeks.googlecode.com/svn/repository/snapshots</url>
 		</snapshotRepository>

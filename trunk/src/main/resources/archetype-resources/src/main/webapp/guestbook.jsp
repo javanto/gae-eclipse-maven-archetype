@@ -11,8 +11,8 @@
 <jsp:directive.page import="com.google.appengine.api.users.UserService" />
 <jsp:directive.page
 	import="com.google.appengine.api.users.UserServiceFactory" />
-<jsp:directive.page import="${packageInPathFormat}.Greeting" />
-<jsp:directive.page import="${packageInPathFormat}.PMF" />
+<jsp:directive.page import="${package}.Greeting" />
+<jsp:directive.page import="${package}.PMF" />
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -48,7 +48,7 @@
 	request.setAttribute("greetings", greetings);
 %>
 <c:if test="${symbol_dollar}{empty greetings}">
-	<p>The ${packageInPathFormat} has no messages.</p>
+	<p>The guestbook has no messages.</p>
 </c:if>
 <c:if test="${symbol_dollar}{not empty greetings}">
 	<c:forEach items="${symbol_dollar}{greetings}" var="g">
