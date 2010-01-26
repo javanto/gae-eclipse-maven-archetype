@@ -9,7 +9,7 @@
 <web-app xmlns="http://java.sun.com/xml/ns/javaee" version="2.5">
     <servlet>
         <servlet-name>sign</servlet-name>
-        <servlet-class>${packageInPathFormat}.SignGuestbookServlet</servlet-class>
+        <servlet-class>${package}.SignGuestbookServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>sign</servlet-name>
