@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
-	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+	
 	<groupId>org.beardedgeeks</groupId>
 	<artifactId>gae-eclipse-maven-archetype</artifactId>
-	<version>1.0-SNAPSHOT</version>
-	<packaging>maven-archetype</packaging>
+	<version>1.0.1</version>
+	<packaging>jar</packaging>
+	
 	<name>GAE + Eclipse + Maven Archetype</name>
 	<description>Arhectype for Maven managed Google App Engine project which is integrated with Google Plugin for Eclipse.</description>
 	<url>http://code.google.com/p/beardedgeeks</url>
@@ -42,9 +42,9 @@
 		<url>http://code.google.com/p/beardedgeeks/issues/list</url>
 	</issueManagement>
 	<scm>
-		<connection>scm:svn:http://beardedgeeks.googlecode.com/svn/gae-eclipse-maven-archetype</connection>
-		<developerConnection>scm:svn:https://beardedgeeks.googlecode.com/svn/gae-eclipse-maven-archetype</developerConnection>
-		<url>http://code.google.com/p/beardedgeeks/source/browse/#svn/gae-eclipse-maven-archetype</url>
+		<connection>scm:svn:http://beardedgeeks.googlecode.com/svn/gae-eclipse-maven-archetype/tags/gae-eclipse-maven-archetype-1.0.1</connection>
+		<developerConnection>scm:svn:https://beardedgeeks.googlecode.com/svn/gae-eclipse-maven-archetype/tags/gae-eclipse-maven-archetype-1.0.1</developerConnection>
+		<url>http://code.google.com/p/beardedgeeks/source/browse/#svn/gae-eclipse-maven-archetype/tags/gae-eclipse-maven-archetype-1.0.1</url>
 	</scm>
 
 	<build>
@@ -68,6 +68,19 @@
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.0.2</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-release-plugin</artifactId>
 				<version>2.0-beta-8</version>
 			</plugin>
@@ -76,13 +89,46 @@
 
 	<distributionManagement>
 		<repository>
-			<id>beardedgeeks-googlecode</id>
+			<id>beardedgeeks-releases</id>
 			<url>svn:https://beardedgeeks.googlecode.com/svn/repository/releases</url>
 		</repository>
 		<snapshotRepository>
-			<id>beardedgeeks-googlecode</id>
+			<id>beardedgeeks-snapshots</id>
 			<uniqueVersion>false</uniqueVersion>
 			<url>svn:https://beardedgeeks.googlecode.com/svn/repository/snapshots</url>
 		</snapshotRepository>
 	</distributionManagement>
+
+	<repositories>
+		<repository>
+			<id>beardedgeeks-snapshots</id>
+			<url>http://beardedgeeks.googlecode.com/svn/repository/snapshots</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>beardedgeeks-releases</id>
+			<url>http://beardedgeeks.googlecode.com/svn/repository/releases</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>maven2-repository.dev.java.net</id>
+			<url>http://download.java.net/maven/2</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
 </project>
