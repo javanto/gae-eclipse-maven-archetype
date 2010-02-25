@@ -4,7 +4,7 @@
 	
 	<groupId>org.beardedgeeks</groupId>
 	<artifactId>gae-eclipse-maven-archetype</artifactId>
-	<version>1.1.2-SNAPSHOT</version>
+	<version>1.1.2</version>
 	<packaging>jar</packaging>
 	
 	<name>GAE + Eclipse + Maven Archetype</name>
@@ -42,9 +42,9 @@
 		<url>http://code.google.com/p/beardedgeeks/issues/list</url>
 	</issueManagement>
 	<scm>
-		<connection>scm:svn:http://beardedgeeks.googlecode.com/svn/gae-eclipse-maven-archetype</connection>
-		<developerConnection>scm:svn:https://beardedgeeks.googlecode.com/svn/gae-eclipse-maven-archetype</developerConnection>
-		<url>http://code.google.com/p/beardedgeeks/source/browse/#svn/gae-eclipse-maven-archetype</url>
+		<connection>scm:svn:http://beardedgeeks.googlecode.com/svn/gae-eclipse-maven-archetype/tags/gae-eclipse-maven-archetype-1.1.2</connection>
+		<developerConnection>scm:svn:https://beardedgeeks.googlecode.com/svn/gae-eclipse-maven-archetype/tags/gae-eclipse-maven-archetype-1.1.2</developerConnection>
+		<url>http://code.google.com/p/beardedgeeks/source/browse/#svn/gae-eclipse-maven-archetype/tags/gae-eclipse-maven-archetype-1.1.2</url>
 	</scm>
 
 	<build>
