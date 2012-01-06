@@ -2,18 +2,18 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	
-	<groupId>org.beardedgeeks</groupId>
+	<groupId>com.javanto</groupId>
 	<artifactId>gae-eclipse-maven-archetype</artifactId>
-	<version>1.3.3-SNAPSHOT</version>
+	<version>2.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	
 	<name>GAE + Eclipse + Maven Archetype</name>
 	<description>Arhectype for Maven managed Google App Engine project which is integrated with Google Plugin for Eclipse.</description>
-	<url>http://code.google.com/p/beardedgeeks</url>
+	<url>http://javanto.com</url>
 	<inceptionYear>2010</inceptionYear>
 	<organization>
-		<name>Bearded Geeks</name>
-		<url>http://beardedgeeks.org</url>
+		<name>Javanto</name>
+		<url>http://javanto.com</url>
 	</organization>
 	<licenses>
 		<license>
@@ -27,9 +27,9 @@
 			<id>hleinone</id>
 			<name>Hannu Leinonen</name>
 			<email>hleinone@gmail.com</email>
-			<url>http://hamandeggs.wordpress.com</url>
-			<organization>Bearded Geeks</organization>
-			<organizationUrl>http://beardedgeeks.org</organizationUrl>
+			<url>http://javanto.com</url>
+			<organization>Javanto</organization>
+			<organizationUrl>http://javanto.com</organizationUrl>
 			<roles>
 				<role>owner</role>
 			</roles>
@@ -38,13 +38,13 @@
 	</developers>
 
 	<issueManagement>
-		<system>Google Code</system>
-		<url>http://code.google.com/p/beardedgeeks/issues/list</url>
+		<system>GitHub</system>
+		<url>https://github.com/javanto/gae-eclipse-maven-archetype/issues</url>
 	</issueManagement>
 	<scm>
-		<connection>scm:svn:http://beardedgeeks.googlecode.com/svn/gae-eclipse-maven-archetype</connection>
-		<developerConnection>scm:svn:https://beardedgeeks.googlecode.com/svn/gae-eclipse-maven-archetype</developerConnection>
-		<url>http://code.google.com/p/beardedgeeks/source/browse/#svn/gae-eclipse-maven-archetype</url>
+		<connection>scm:git:git@github.com:javanto/gae-eclipse-maven-archetype.git</connection>
+		<developerConnection>scm:git:git@github.com:javanto/gae-eclipse-maven-archetype.git</developerConnection>
+		<url>https://github.com/javanto/gae-eclipse-maven-archetye</url>
 	</scm>
 
 	<build>
@@ -55,9 +55,9 @@
 				<version>1.0-beta-2</version>
 			</extension>
 			<extension>
-				<groupId>org.jvnet.wagon-svn</groupId>
-				<artifactId>wagon-svn</artifactId>
-				<version>1.9</version>
+				<groupId>ar.com.synergian</groupId>
+				<artifactId>wagon-git</artifactId>
+				<version>0.1.4</version>
 			</extension>
 			<extension>
 				<groupId>org.apache.maven.archetype</groupId>
@@ -94,38 +94,18 @@
 
 	<distributionManagement>
 		<repository>
-			<id>beardedgeeks-releases</id>
-			<url>dav:https://beardedgeeks.googlecode.com/svn/repository/releases</url>
+			<id>javanto-releases</id>
+			<url>git:releases://git@github.com:javanto/repository.git</url>
 		</repository>
 		<snapshotRepository>
-			<id>beardedgeeks-snapshots</id>
+			<id>javanto-snapshots</id>
 			<uniqueVersion>false</uniqueVersion>
-			<url>dav:https://beardedgeeks.googlecode.com/svn/repository/snapshots</url>
+			<url>git:snapshots://git@github.com:javanto/repository.git</url>
 		</snapshotRepository>
 	</distributionManagement>
 
-	<repositories>
-		<repository>
-			<id>beardedgeeks-snapshots</id>
-			<url>http://beardedgeeks.googlecode.com/svn/repository/snapshots</url>
-			<releases>
-				<enabled>false</enabled>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
-		<repository>
-			<id>beardedgeeks-releases</id>
-			<url>http://beardedgeeks.googlecode.com/svn/repository/releases</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
-		<repository>
+	<pluginRepositories>
+		<pluginRepository>
 			<id>maven2-repository.dev.java.net</id>
 			<url>http://download.java.net/maven/2</url>
 			<releases>
@@ -134,6 +114,16 @@
 			<snapshots>
 				<enabled>false</enabled>
 			</snapshots>
-		</repository>
-	</repositories>
+		</pluginRepository>
+		<pluginRepository>
+			<id>synergian-repo</id>
+			<url>https://raw.github.com/synergian/wagon-git/releases</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
 </project>
