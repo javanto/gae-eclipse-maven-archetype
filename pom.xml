@@ -9,7 +9,7 @@
 	
 	<name>GAE + Eclipse + Maven Archetype</name>
 	<description>Arhectype for Maven managed Google App Engine project which is integrated with Google Plugin for Eclipse.</description>
-	<url>http://javanto.com</url>
+	<url>https://github.com/javanto/gae-eclipse-maven-archetype</url>
 	<inceptionYear>2010</inceptionYear>
 	<organization>
 		<name>Javanto</name>
@@ -42,18 +42,13 @@
 		<url>https://github.com/javanto/gae-eclipse-maven-archetype/issues</url>
 	</issueManagement>
 	<scm>
-		<connection>scm:git:git@github.com:javanto/gae-eclipse-maven-archetype.git</connection>
-		<developerConnection>scm:git:git@github.com:javanto/gae-eclipse-maven-archetype.git</developerConnection>
+		<connection>scm:git:git://git@github.com/javanto/gae-eclipse-maven-archetype.git</connection>
+		<developerConnection>scm:git:git://git@github.com/javanto/gae-eclipse-maven-archetype.git</developerConnection>
 		<url>https://github.com/javanto/gae-eclipse-maven-archetye</url>
 	</scm>
 
 	<build>
 		<extensions>
-			<extension>
-				<groupId>org.apache.maven.wagon</groupId>
-				<artifactId>wagon-webdav</artifactId>
-				<version>1.0-beta-2</version>
-			</extension>
 			<extension>
 				<groupId>ar.com.synergian</groupId>
 				<artifactId>wagon-git</artifactId>
